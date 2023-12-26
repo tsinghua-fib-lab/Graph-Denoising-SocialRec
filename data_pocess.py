@@ -5,11 +5,8 @@ import random
 import pickle
 
 filepath = '***'
-
 ratingsData = np.loadtxt(os.path.join(filepath, 'ratings.txt'))
 trustData = np.loadtxt(os.path.join(filepath, 'trusts.txt'))
-
-
 
 
 # filter
@@ -19,7 +16,6 @@ for i in range(ratingsData.shape[0]):
         uid = ratingsData[i, 0]
         iid = ratingsData[i, 1]
         data.append([uid, iid])
-
 
 
 user_count = {}
@@ -70,7 +66,6 @@ for i in range(len(trustData)):
 
 trust_data = np.array(trust_data)
 print(len(user_set), len(item_set), len(data_all), trust_data.shape[0])
-
 
 
 user_visited_dict = {}
